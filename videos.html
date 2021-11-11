@@ -30,35 +30,11 @@
       </header>
 
       <main class="snowflakes overflow-x-auto" aria-hidden="true">
-        <h2 class="text-center text-3xl pb-4 pt-12 text-green-200">All Songs</h2>
+        <h2 class="text-center text-3xl pb-4 pt-12 text-blue-200">All Songs</h2>
         <div id="all-songs" class="flex flex-wrap items-center justify-around text-white text-center border border-white rounded p-4 m-4"></div>
 
-        <h2 class="text-center text-3xl pb-4 pt-12 text-green-200">Embeddable Songs</h2>
-        <div class="flex flex-wrap">
-          <div class="w-full py-3 md:w-1/2 md:py-5 xl:w-1/3 2xl:w-1/4 mx-auto flex items-center justify-center"><iframe class="w-80" src="https://www.youtube.com/embed/vquGpfbnqRc" title="YouTube video player"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe> </div>
-
-          <div class="w-full py-3 md:w-1/2 md:py-5 xl:w-1/3 2xl:w-1/4 mx-auto flex items-center justify-center"><iframe class="w-80" src="https://www.youtube.com/embed/amK4U4pCTB8" title="YouTube video player"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe> </div>
-
-          <div class="w-full py-3 md:w-1/2 md:py-5 xl:w-1/3 2xl:w-1/4 mx-auto flex items-center justify-center"><iframe class="w-80" src="https://www.youtube.com/embed/ZWzia-qNG4Q" title="YouTube video player"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe> </div>
-
-          <div class="w-full py-3 md:w-1/2 md:py-5 xl:w-1/3 2xl:w-1/4 mx-auto flex items-center justify-center"><iframe class="w-80" src="https://www.youtube.com/embed/xwIHONgzq-w" title="YouTube video player"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe> </div>
-
-          <div class="w-full py-3 md:w-1/2 md:py-5 xl:w-1/3 2xl:w-1/4 mx-auto flex items-center justify-center"><iframe class="w-80" src="https://www.youtube.com/embed/70UPlfetoy4" title="YouTube video player"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe> </div>
-
-          <div class="w-full py-3 md:w-1/2 md:py-5 xl:w-1/3 2xl:w-1/4 mx-auto flex items-center justify-center"><iframe class="w-80" src="https://www.youtube.com/embed/L9iKKS5RVss" title="YouTube video player"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe> </div>
-        </div>
+        <h2 class="text-center text-3xl pb-4 pt-12 text-blue-200">Embeddable Songs</h2>
+        <div id="embedded-songs" class="flex flex-wrap"></div>
       </main>
       <footer class="mt-12 w-full bg-green-200 h-12 flex items-center justify-center space-x-3">
         <p class="flex items-center justify-center">&copy; <span id="year" class="pr-1">2021</span>
@@ -79,6 +55,7 @@
           <span class="sr-only">GitHub Repo</span>
         </a>
       </footer>
+      <script type="text/javascript" src="songs.js"></script>
       <script type="text/javascript">
         const snowflakesContainer = document.getElementsByClassName('snowflakes')[0]
         for (let i = 0; i < 10; i++) {
@@ -91,118 +68,44 @@
         const currentYear = new Date().getFullYear();
         yearEl.textContent = currentYear
 
-        const songs = [
-          {
-            title: 'O Holy Night',
-            artist: 'Nsync',
-            embedUrl: null,
-            url: 'https://www.youtube.com/watch?v=MXzJqRXLI08',
-            recommender: 'Blake Farrow',
-          },
-          {
-            title: 'All I Want For Christmas',
-            artist: 'Chase Holfelder',
-            embedUrl: null,
-            url: 'https://www.youtube.com/watch?v=SDACj0tkD-s',
-            recommender: 'McKell Staheli',
-          },
-          {
-            title: 'Alone This Holiday',
-            artist: 'The Used',
-            embedUrl: null,
-            url: 'https://www.youtube.com/watch?v=MXzJqRXLI08',
-            recommender: 'Keaton Hawker',
-          },
-          {
-            title: 'Last Christmas',
-            artist: 'Wham!',
-            embedUrl: 'https://www.youtube.com/embed/vquGpfbnqRc',
-            embedIsDifferent: true,
-            url: 'https://www.youtube.com/watch?v=E8gmARGvPlI',
-            recommender: 'Caleb Moore',
-          },
-          {
-            title: 'Last Christmas',
-            artist: 'Glee',
-            embedUrl: 'https://www.youtube.com/embed/vquGpfbnqRc',
-            url: 'https://www.youtube.com/watch?v=ZWzia-qNG4Q',
-            recommender: 'Keaton Hawker',
-          },
-          {
-            title: 'Last Christmas',
-            artist: 'Hilary Duff',
-            embedUrl: null,
-            url: 'https://www.youtube.com/watch?v=8vGm1d2hgDI',
-            recommender: 'Caleb Moore',
-          },
-          {
-            title: 'Baby It\'s Cold Outside',
-            artist: 'Lydia Liza and Josiah Lemanski',
-            embedUrl: 'https://www.youtube.com/watch?v=amK4U4pCTB8',
-            url: 'https://www.youtube.com/watch?v=MXzJqRXLI08',
-            recommender: 'Natie Poecker',
-          },
-          {
-            title: 'It\'s Raining Tacos',
-            artist: 'Parry Gripp',
-            embedUrl: 'https://www.youtube.com/embed/xwIHONgzq-w',
-            url: 'https://www.youtube.com/watch?v=MXzJqRXLI08',
-            recommender: 'Heather Nuffer',
-          },
-          {
-            title: 'Merry Christmas, Happy Holidays',
-            artist: 'Nsync',
-            embedUrl: null,
-            url: 'https://www.youtube.com/watch?v=wKj92352UAE',
-            recommender: 'Caleb Moore',
-          },
-          {
-            title: 'God Rest Ye Merry Hippogriffs',
-            artist: 'Midnight Sky',
-            embedUrl: 'https://www.youtube.com/embed/70UPlfetoy4',
-            url: 'https://www.youtube.com/watch?v=70UPlfetoy4',
-            recommender: 'Heather Nuffer',
-          },
-          {
-            title: 'The Christmas Song (& Others)',
-            artist: 'She and Him',
-            embedUrl: null,
-            url: 'https://www.youtube.com/playlist?list=PLEC2FCC95451E0F6E',
-            recommender: 'McKell Staheli',
-          },
-          {
-            title: 'Could I Hold The Baby?',
-            artist: 'Rachel M. Goates',
-            embedUrl: 'https://www.youtube.com/embed/L9iKKS5RVss',
-            url: 'https://www.youtube.com/watch?v=L9iKKS5RVss',
-            recommender: 'Heather Nuffer',
-          },
-          {
-            title: 'Mele Kalikimaka',
-            artist: 'Zooey Deschanel',
-            embedUrl: null,
-            url: 'https://www.youtube.com/watch?v=ZcNHZS0aDsQ',
-            recommender: 'Caleb Moore',
-          },
-        ]
-
         const songsContainer = document.getElementById('all-songs')
-        for (let i=0; i<songs.length; i++) {
-          const songDiv = document.createElement('div')
-          songDiv.classList.add('w-full', 'py-2', 'sm:w-1/2', 'lg:w-1/3')
-          const songLinkEl = document.createElement('a')
-          songLinkEl.href = songs[i]['url']
-          songLinkEl.target = '_blank'
-          songLinkEl.textContent = `${songs[i]['title']} - ${songs[i]['artist']}`
-          songLinkEl.classList.add('text-red-400', 'hover:text-red-600', 'text-center', 'text-2xl', 'pb-1')
-          const recommenderEl = document.createElement('p')
-          recommenderEl.textContent = `a favorite of ${songs[i]['recommender']}`
-          recommenderEl.classList.add('text-sm')
-          songDiv.append(songLinkEl, recommenderEl)
-          songsContainer.appendChild(songDiv)
-        }
+        const videosContainer = document.getElementById('embedded-songs')
+        let colorIndex = 0
+        const textColors = ['green-400', 'yellow-200', 'red-400']
+        const hoverColors = ['green', 'yellow', 'red']
 
+        window.addEventListener('load', () => {
+          for (let i=0; i<songs.length; i++) {
+            const songDiv = document.createElement('div')
+            songDiv.classList.add('w-full', 'py-3', 'sm:w-1/2', 'lg:w-1/3', 'lg:py-4')
+            const songLinkEl = document.createElement('a')
+            songLinkEl.href = songs[i]['url']
+            songLinkEl.target = '_blank'
+            songLinkEl.textContent = `${songs[i]['title']} - ${songs[i]['artist']}`
+            songLinkEl.classList.add('text-center', 'text-2xl', 'pb-1.5', `text-${textColors[colorIndex]}`, `hover:text-${hoverColors[colorIndex]}-600`)
+            colorIndex = (colorIndex + 1) % 3
+            const recommenderEl = document.createElement('p')
+            recommenderEl.textContent = `a favorite of ${songs[i]['recommender']}`
+            recommenderEl.classList.add('text-sm')
+            songDiv.append(songLinkEl, recommenderEl)
+            songsContainer.appendChild(songDiv)
+
+            // Add the video if it is embeddable
+            if (songs[i]['embedUrl']) {
+              const videoContainer = document.createElement('div')
+              videoContainer.classList.add('w-full', 'py-3', 'md:w-1/2', 'md:py-5', 'xl:w-1/3', '2xl:w-1/4', 'mx-auto', 'flex', 'items-center', 'justify-center')
+              const iframeEl = document.createElement('iframe')
+              iframeEl.classList.add('border')
+              iframeEl.src = songs[i]['embedUrl']
+              iframeEl.title = 'YouTube video player'
+              iframeEl.frameborder = '0'
+              iframeEl.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              iframeEl.setAttribute('allowFullScreen', '')
+              videoContainer.appendChild(iframeEl)
+              videosContainer.appendChild(videoContainer)
+            }
+          }
+        })
       </script>
   </body>
-
 </html>
