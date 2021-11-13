@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="christmas-record.png">
     <meta property="og:url" content="https://ethyl2.github.io/best-company-winter-songs/">
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="🎄 Best Company Favorite Winter Holiday Songs 2021 🎄">
     <meta property="og:description" content="videos of favorite winter holiday songs of Best Company team members">
     <meta name="twitter:card" content="summary_large_image">
@@ -35,28 +36,17 @@
     <div class="w-full bg-black min-h-screen" style="font-family: 'Mountains of Christmas', cursive;">
       <header id="header" class="px-4 py-10 bg-blue-900 w-full sticky text-white">
         <h1 class="text-center text-2xl font-bold md:text-5xl pb-4">Best Company's Favorite Songs</h1>
-        <h1 class="text-center text-xl font-bold md:text-3xl">For the Winter Holidays (Christmas, Hanukkah, Etc.)</h1>
+        <h1 class="text-center text-xl font-bold md:text-4xl">For the Winter Holidays (Christmas, Hanukkah, Etc.)</h1>
       </header>
 
       <main class="snowflakes overflow-x-auto" aria-hidden="true">
-        <a
-            href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-            class="twitter-share-button"
-            data-show-count="false"
-            >Share</a
-          >
-          <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"
-          ></script>
-        <h2 class="text-center text-3xl pb-4 pt-12 text-blue-200">All Songs</h2>
+        <h2 class="text-center text-3xl pb-4 pt-12 text-blue-200 md:text-4xl">All Songs</h2>
         <div id="all-songs" class="flex flex-wrap items-center justify-around text-white text-center border border-white rounded p-4 m-4"></div>
 
         <h2 class="text-center text-3xl pb-4 pt-12 text-blue-200">Embeddable Songs</h2>
         <div id="embedded-songs" class="flex flex-wrap"></div>
       </main>
-      <footer class="mt-12 w-full bg-green-200 h-12 flex items-center justify-center space-x-3">
+      <footer class="relative mt-12 w-full bg-green-200 h-28 flex items-center justify-center space-x-3">
         <p class="flex items-center justify-center">&copy; <span id="year" class="pr-1">2021</span>
           <a href="https://github.com/ethyl2" target="_blank" rel="noopener noreferrer">Heather Nuffer</a>
         </p>
@@ -74,6 +64,28 @@
           </svg>
           <span class="sr-only">GitHub Repo</span>
         </a>
+        <!-- SOCIAL SHARING -->
+        <div 
+          class="w-full absolute top-0 left-0 flex items-center justify-around space-x-0 pt-2 m-0 md:w-auto md:pl-4 md:flex-col md:justify-start"
+          style="margin-left: 0 !important; margin-right: 0 !important;"
+        >
+          <div>
+            <script type="IN/Share" data-url="https://ethyl2.github.io/best-company-winter-songs/"></script>
+          </div>
+          <div class="pl-6 mt-1 sm:pl-24 md:pl-0">
+            <a
+                href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                class="twitter-share-button"
+                data-show-count="false"
+                >Share on Twitter
+            </a>
+          </div>
+          <div id="fb-root"></div>
+          <div class="fb-share-button" 
+            data-href="https://ethyl2.github.io/best-company-winter-songs/" 
+            data-layout="button">
+          </div>
+        </div>
       </footer>
       <script type="text/javascript" src="songs.js"></script>
       <script type="text/javascript">
@@ -127,5 +139,20 @@
           }
         })
       </script>
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charset="utf-8"
+      ></script>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0]
+        if (d.getElementById(id)) return
+        js = d.createElement(s) 
+        js.id = id
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0"
+        fjs.parentNode.insertBefore(js, fjs)
+        }(document, 'script', 'facebook-jssdk'))
+      </script>
+      <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
   </body>
 </html>
