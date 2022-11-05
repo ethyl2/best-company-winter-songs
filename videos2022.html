@@ -117,19 +117,21 @@
         const hoverColors = ['green', 'yellow', 'red']
 
         window.addEventListener('load', () => {
-          for (let i=0; i < songs2022.length; i++) {
-            const songLink = document.createElement('a')
-            songLink.classList.add('ornament', 'hover:text-gray-900', 'text-2xl', 'font-bold', 'text-black', 'h-96', 'w-96', 'm-4', 'block', 'rounded-full', 'flex', 'items-center', 'justify-center', 'flex-col', 'bg-cover', 'bg-center', 'bg-no-repeat', 'p-24', 'pt-48')
-            songLink.style.backgroundImage = `url(${songs2022[i].image})`
-            songLink.href = songs2022[i]['url']
-            songLink.target = '_blank'
-            songLink.textContent = `${songs2022[i]['title']} - ${songs2022[i]['artist']}`
-            const recommenderEl = document.createElement('p')
-            recommenderEl.textContent = `a favorite of ${songs2022[i]['recommender']}`
-            recommenderEl.classList.add('text-sm', 'text-black')
-            songLink.append(recommenderEl)
-            songsContainer.appendChild(songLink)
-          }
+          setTimeout(() => {
+            for (let i = 0; i < songs2022.length; i++) {
+              const songLink = document.createElement('a')
+              songLink.classList.add('ornament', 'hover:text-gray-900', 'text-2xl', 'font-bold', 'text-black', 'h-96', 'w-96', 'm-4', 'block', 'rounded-full', 'flex', 'items-center', 'justify-center', 'flex-col', 'bg-cover', 'bg-center', 'bg-no-repeat', 'p-24', 'pt-48')
+              songLink.style.backgroundImage = `url(${songs2022[i].image})`
+              songLink.href = songs2022[i]['url']
+              songLink.target = '_blank'
+              songLink.textContent = `${songs2022[i]['title']} - ${songs2022[i]['artist']}`
+              const recommenderEl = document.createElement('span')
+              recommenderEl.textContent = `a favorite of ${songs2022[i]['recommender']}`
+              recommenderEl.classList.add('text-sm', 'text-black')
+              songLink.append(recommenderEl)
+              songsContainer.appendChild(songLink)
+            }
+          }, 1000)
         })
       </script>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
