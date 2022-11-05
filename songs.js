@@ -66,7 +66,7 @@ const songs = [
   {
     title: 'God Rest Ye Merry Hippogriffs',
     artist: 'Midnight Sky',
-    embedUrl: 'https://www.youtube.com/embed/70UPlfetoy4',
+    embedUrl: null,
     url: 'https://www.youtube.com/watch?v=70UPlfetoy4',
     recommender: 'Heather Nuffer',
   },
@@ -164,7 +164,7 @@ const songs = [
   {
     title: 'Merry Christmas, Happy New Year',
     artist: 'Ingrid Michaelson & Zooey Deschanel',
-    embedUrl: 'https://www.youtube.com/embed/s9AU0gUGumE',
+    embedUrl: null,
     url: 'https://youtu.be/s9AU0gUGumE',
     recommender: 'Kalicia Bateman',
   },
@@ -174,5 +174,41 @@ const songs = [
     embedUrl: 'https://www.youtube.com/embed/CnIFTtW1pko',
     url: 'https://youtu.be/CnIFTtW1pko',
     recommender: 'Heather Nuffer',
+  },
+]
+
+
+const songs2022 = [
+  {
+    title: 'Christmas Shoes',
+    artist: 'NewSong',
+    embedUrl: null,
+    url: 'https://youtu.be/MpkI7GW2V34',
+    recommender: 'Christian Jones',
+    image: './images/ball1.png',
+  },
+  {
+    title: 'All I Want For Christmas',
+    artist: 'Mariah Carey',
+    embedUrl: null,
+    url: 'https://youtu.be/aAkMkVFwAoo',
+    recommender: 'Courtney Monlux',
+    image: './images/ball2.png',
+  },
+  {
+    title: 'Dominick the Donkey',
+    artist: 'Lou Monte',
+    embedUrl: null,
+    url: 'https://youtu.be/Ca5wXojemRM',
+    recommender: 'Courtney Monlux',
+    image: './images/ball3.png',
+  },
+  {
+    title: 'Ding Dong Merrily On High',
+    artist: 'Celtic Woman',
+    embedUrl: null,
+    url: 'https://youtu.be/7uyb2q18aPY',
+    recommender: 'Heather Nuffer',
+    image: './images/ball4.png',
   },
 ]
