@@ -26,14 +26,7 @@ const songs = [
     embedUrl: 'https://www.youtube.com/embed/vquGpfbnqRc',
     embedIsDifferent: true,
     url: 'https://www.youtube.com/watch?v=E8gmARGvPlI',
-    recommender: 'Caleb Moore',
-  },
-  {
-    title: 'Last Christmas',
-    artist: 'Glee',
-    embedUrl: 'https://www.youtube.com/embed/ZWzia-qNG4Q',
-    url: 'https://www.youtube.com/watch?v=ZWzia-qNG4Q',
-    recommender: 'Keaton Hawker',
+    recommender: 'Caleb Moore & Keaton Hawker',
   },
   {
     title: 'Last Christmas',
@@ -171,12 +164,11 @@ const songs = [
   {
     title: 'We Three Kings',
     artist: 'Claymation Christmas',
-    embedUrl: 'https://www.youtube.com/embed/CnIFTtW1pko',
+    embedUrl: 'https://www.youtube.com/embed/tR53QamRpw0?si=tkWDqIOjWtx5KSU4',
     url: 'https://youtu.be/CnIFTtW1pko',
     recommender: 'Heather Nuffer',
   },
 ]
-
 
 const songs2022 = [
   {
